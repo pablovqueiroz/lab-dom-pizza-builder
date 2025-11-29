@@ -91,13 +91,13 @@ function renderButtons() {
 
 function renderPrice() {
   // Iteration 4: change the HTML of `<aside class="panel price">`
-    const panel = document.querySelector('.panel.price');
+  const panel = document.querySelector('.panel.price');
   let total = basePrice;
   let priceList = '';
 
-  Object.keys(ingredients).forEach(ingredient => {
+  Object.keys(ingredients).forEach((ingredient) => {
     if (state[ingredient]) {
-      total += ingredients[ingredient].price; 
+      total += ingredients[ingredient].price;
       priceList += `<li>$${ingredients[ingredient].price} ${ingredients[ingredient].name}</li>`;
     }
   });
